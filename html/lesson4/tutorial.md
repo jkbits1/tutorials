@@ -70,8 +70,8 @@ Before styling the header, reset the default styling of the page. This ensures c
 
 ```css
 body {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 ```
 
@@ -159,7 +159,7 @@ Color the `<h1>` so it stands out and is not the same as the other text on the p
 
 ## Adding a toolbar
 
-Add some of the resources we used to find out more information about Grace. 
+Add some of the resources we used to find out more information about Grace.
 This should be placed before the header closing tag.
 
 ```html
@@ -173,15 +173,15 @@ This should be placed before the header closing tag.
 </div>
 ```
 
-Add an id `resources` to the outer `<div>`
+Add an id `toolbar` to the outer `<div>`
 
 ### Styling the toolbar
 
 First let's remove the bullet from the list of links
 
 ```css
-#resources ul {
-  list-style:none;
+#toolbar ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -190,7 +190,7 @@ First let's remove the bullet from the list of links
 and make the elements inline so they sit next to each other
 
 ```css
-#resources li {
+#toolbar li {
   display: inline-block;
   padding: 10px;
 }
@@ -206,7 +206,7 @@ text-align: center;
 The text is now really hard to see. Change the color of the link...
 
 ```css
-#resources li a {
+#toolbar li a {
   text-decoration: none;
   color: #e7e7e7;
 }
@@ -215,7 +215,7 @@ The text is now really hard to see. Change the color of the link...
 ... and make it underline when you hover your mouse over it.
 
 ```css
-#resources li a:hover {
+#toolbar li a:hover {
   border-bottom: 1px solid;
 }
 ```
@@ -459,7 +459,7 @@ Extend `header` and set its position to fixed
 position: fixed;
 ```
 
-> Refresh the page. Notice how the header size has now collapsed to the size of its content? 
+> Refresh the page. Notice how the header size has now collapsed to the size of its content?
 
 Fix this by setting the width
 
