@@ -7,17 +7,17 @@ This is the second tutorial on HTTP Requests, AJAX and APIs. You can find the [f
 
 ## Todays lesson
 
-In the last lesson we've explained an HTTP Requests is when we ask the server some information.
+In the last lesson we learnt that an HTTP Request is when we ask the server for some information.
 
-In the two exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
+In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
 
 We will be using the **POST**, **PUT** and **GET** requests, and other things we've learned in the last couple of lessons.
 
 
 | Verb | Description |
 | ---- | ----------- |
-| **GET**  | fetching a resource (e.g. /index.html  will return the HTML of the page) |
-| **PUT**  |  updating an existing resource. |
+| **GET**  |  Fetching a resource (e.g. /index.html  will return the HTML of the page) |
+| **PUT**  |  Updating an existing resource. |
 | **POST** |  Create a new resource. |
 
 
@@ -69,14 +69,15 @@ $.ajax({
     3. Update the stored token
 
     4. Update remaining attempts and display all guesses
-        - If an attempt is not succesful, appent it to the `$('.attempts')` using a span with the class `wrong`
-        - You can then find out how many wrong attempts there wer using `$('.wrong').length+1;`
+        - Append each attempt to the `$('.attempts')` using a span
+        - If the attempt is successful, include the class `correct` in the span; if it is unsuccessful, include the class `wrong`
+        - You can then find out how many wrong attempts there were using `$('.wrong').length+1;`
 
 3. On the 7th failure, retrieve the solution using the **GET** request
 
     1. Display the solution, hide the input field and allow a user to start a new game
 
-4. **Bonus** don't process letters, guesses that have already been attempted or empty space 
+4. **Bonus** don't process numbers, guesses that have already been attempted or empty space
 
     1. You can use jQuery's `$.isNumeric(character))` to check if a letter is a number
 
@@ -94,3 +95,9 @@ Here is our version of [Hangman](../../examples/hangman/index.html).
 
 ---
 This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+## Extras
+
+Now that you are familiar with HTTP requests, AJAX and APIs, how about you go away and create a webpage that pulls in all instagram pictures with a certain hashtag.
+
+Or embed a google map onto a webpage with it pointing to a destination of your choice in London.

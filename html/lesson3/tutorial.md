@@ -1,34 +1,43 @@
 ---
 layout: page
-title: HTML Lesson 3
+title: HTML & CSS Lesson 3
 footer: true
 ---
 
 ##  HTML AND CSS - Beyond the basics
 
+###Objectives 
+ 
+In this tutorial we are going to look at:
+ 
+* Development Tools
+* Structuring content
+* Inline vs block elements
+* Box model
+* :hover state
+
+We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+ 
+###Goal
+ 
+The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link.](assets/lesson3.zip)
+
 ### Recap
 
 In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. **HTML** defines the _structure_ of a website and **CSS** the _presentation_.
 
-### Today we will be building a styled website from scratch
 
-The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
-
-We will also be explaining in more detail elements that we mentioned in our previous lesson.
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link](assets/lesson3.zip)
-
-### Development Tools - Inspectors
+## Development Tools - Inspectors
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](http://getfirebug.com/).
 
-![](assets/images/firebug.png)
+![](assets/images/chrome-devtools.png)
 
 >  Ask your coach to show you how to edit the styling on our example page using firebug
 
@@ -93,7 +102,7 @@ Add an image wrapped in a `<div>` element
 
 ```html
 <div>
-  <img src="ada_lovelace.jpg"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -115,7 +124,7 @@ Before you can manipulate the `<div>` surrounding the image, you must be able to
 
 ```html
 <div class="my-picture">
-  <img src="ada_lovelace.jpg"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -178,13 +187,13 @@ An element can be visualised as a box. The box model is a way of describing the 
 
 **<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides. In the example below from the BBC News site, all three are applied, but only above the content.
 
-![](assets/images/box-model.png)
+![](assets/images/box-model.gif)
 
 ### Styling the header
 
-The page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
+Our page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
 
 ```css
 header {
@@ -262,7 +271,7 @@ margin-top: 55px;
 margin-left: 20px;
 ```
 
-###padding and margin
+###Padding and margin
 Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
@@ -275,9 +284,9 @@ Padding and margin can be set in a number of different ways
 
 Alternatively, you can only set the side you want `padding-right: 20px`
 
-_this also applies to the margin_
+_this method also applies to the margin_
 
-###more styling...
+###More styling...
 
 Specify a class `.social-media` in the `ul` element
 
@@ -306,7 +315,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 }
 ```
 
-> Tweak the properties using the inspector
+> Tweak the properties using the inspector.
 > What happens when you remove the width or increase the padding?
 
 ## Pseudo classes
@@ -346,7 +355,7 @@ We only want links that are within the list to be affected. So we will specifica
 
 We only want to change the border color when hovering over the link. To avoid repeating ourselves an easy way to do that is by being more specific and using `border-left-color`. Since we have no other borders, we could also use `border-color`
 
-**Remember to have a look [at the list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mentioned in the previous tutorial) when working on styling. The properties are too many to remember!**
+**Remember to have a look [at the list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mentioned in the previous tutorial) when working on styling. There are too many properties to remember!**
 
 ```css
 .social-media li a:hover {
@@ -381,7 +390,7 @@ box-shadow: 0 1px 1px 1px rgba(237, 235, 232, 0.4);
 
 ## Setting up the main container
 
-You've done a great job so far! The sidebar is done and you know about box properties.
+You've done a great job so far! The sidebar is done and you are familiar with box properties.
 Time to add some content to the page.
 
 Add a div, with the class main after `.sidebar`
@@ -434,7 +443,7 @@ Add a link so that anyone coming to the page can easily find out more about Char
 <a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
-Ada was the world's first programmer. We want that content to stand out. Add a span around and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
+Ada was the world's first programmer therefore we want that to stand out. Add a span around it and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
 
 ```html
 <span class="highlight">I am the world's first programmer</span>
@@ -511,7 +520,7 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 
 <p>
  <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
-  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg" />
+  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg">
  </a>
 </p>
 ```
@@ -582,5 +591,5 @@ Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson
 Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
+This ends our third lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
-This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

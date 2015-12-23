@@ -1,26 +1,28 @@
 ---
 layout: page
-title: HTML Lesson 4
+title: HTML & CSS Lesson 4
 footer: true
 ---
 
-##  HTML AND CSS - CSS, layouts and formatting
+## HTML AND CSS - layouts and formatting
+
+###Objective 
+ 
+Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+ 
+###Goal
+
+The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here.](https://gist.github.com/despo/7443914/download)
 
 ### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
+
 **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo classes.
-
-
-### Today we will be building a website and learn more about CSS layouts and formatting
-
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7443914/download)
 
 ## Getting started
 
@@ -37,7 +39,7 @@ Define the basic structure of the website
 </html>
 ```
 
-Map the stylesheet to the page
+Link the stylesheet to the page
 
 ```html
 <link rel="stylesheet" href="style.css">
@@ -58,7 +60,7 @@ Add a header element in the `<body>` of the page
 ```html
 <header>
   <div>
-    <img src="gracehopper.jpg"/>
+    <img src="gracehopper.jpg" alt="Grace Hopper">
   </div>
   <div>
     <h1>Grace Hopper</h1>
@@ -98,7 +100,7 @@ Set a CSS class `portrait` to the `<div>` wrapping the image
 
 ```html
 <div class="portrait">
-  <img src="gracehopper.jpg"/>
+  <img src="gracehopper.jpg" alt="Grace Hopper">
   ...
 ```
 
@@ -175,6 +177,12 @@ This should be placed before the header closing tag.
 
 Add an id `toolbar` to the outer `<div>`
 
+See what happens when you add a `target="_blank"` to your link
+
+```html
+  <li> <a href="http://www.personal.psu.edu/djd5202/ass6.html" target="_blank">Computer Scientist</a></li>
+```
+
 ### Styling the toolbar
 
 First let's remove the bullet from the list of links
@@ -230,7 +238,7 @@ Let's add the main content. Paste underneath the header. We will tweak things as
 <div id="content">
   <p>
   <div>
-    <img src="mark_i.jpg">
+    <img src="mark_i.jpg" alt="Mark">
     <span>Mark I</span>
   </div>
   Grace Hopper was born in 1906. Her parents, noticing her interest in math, made special arrangements for her to take classes reserved for boys in school. She received a Bachelors deegree in Mathematics and  physics from Vassar college and then moved onto Yale, where she did her Masters deegree in Math. She continued her education and begun a teaching career at Vassar. When she received her PhD she joined the navy, where she was assigned to work in the Bureau of Ordinance computation project at Harvard university. There, she became part of the programming team, who works on the Mark I; the first computer ever made.
@@ -244,7 +252,7 @@ Let's add the main content. Paste underneath the header. We will tweak things as
   </p>
   <p>
   <div>
-     <img src="cobol.jpg"/>
+     <img src="cobol.jpg" alt="Cobol">
      <span>Working with COBOL</span>
   </div>
   Grace loved the Navy, and was reluctant to retire, even at the age of 79. At her retirement ceremony she was recognized for all she contributed, and received the Distinguished Service Medal of the Defense Department, the department's highest honor, and a citation which stated
@@ -272,7 +280,7 @@ Style the container
 }
 ```
 
-> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaluable.
+> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world are invaluable.
 
 ## Floating elements
 
@@ -302,7 +310,7 @@ Add a CSS class to the first image's wrapper
 
 ```html
 <div class="start-of-line">
-  <img  src="mark_i.jpg">
+  <img src="mark_i.jpg" alt="Mark I">
   <span>Mark I</span>
 </div>
 ```
@@ -319,7 +327,7 @@ Add a CSS class to the second image's wrapper
 
 ```html
 <div class="end-of-line">
-  <img src="cobol.jpg"/>
+  <img src="cobol.jpg" alt="Working with Cobol">
   <span>Working with COBOL</span>
 </div>
 ```
@@ -467,7 +475,7 @@ Fix this by setting the width
 width: 100%;
 ```
 
-And reposition the '#content' so it doesn't hide underneath the header. Change the padding property to have a padding-top
+And reposition the `#content` so it doesn't hide underneath the header. Change the padding property to have a padding-top
 
 ```css
 padding: 150px 30px 40px;
@@ -493,7 +501,7 @@ z-index: 99;
 
 ## Ending this lesson
 
-Before we finish the lesson, ensure that we have a minimum width set on the page. This way we can make sure that if the page collapses or is viewed in a much smaller screen, the content won't be hidden by the collapsing header.
+Before we finish the lesson, ensure that we have a minimum width set on the page. This way we can make sure that if the page collapses or is viewed using a much smaller screen, the content won't be hidden by the collapsing header.
 
 ```css
 min-width: 570px;
@@ -506,4 +514,9 @@ line-height: 23px;
 ```
 
 -----
-This ends our fourth and last lesson in introducing HTML and CSS. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+
+##Further reading 
+
+* [Learn layout](http://learnlayout.com/)
+

@@ -1,8 +1,29 @@
 ---
 layout: page
-title: HTML Lesson 2
+title: HTML & CSS Lesson 2
 footer: true
 ---
+
+## Introduction to CSS
+
+###Objectives 
+ 
+In this tutorial we are going to look at:
+ 
+* What is CSS?
+* What you can do with CSS?
+* Introductions to selectors
+* Linking your CSS file
+* Cascading selectors
+* Pseudo classes
+ 
+###Goal
+ 
+Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download) (mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip) (windows).
 
 ## What is CSS?
 
@@ -22,20 +43,8 @@ CSS: presentation
 
 _**CSS** works in conjunction with **HTML**_
 
-### Today we will be focusing on fundamental CSS concepts
 
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
-
-## But before we start...
-
-> The first tutorial does not prepare you for this exercise. Before you continue, download the provided files.
-
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
-
-### What can I do with CSS?
+## What can I do with CSS?
 
 You can change the color, position, dimensions and presentation of different elements
 
@@ -81,7 +90,7 @@ In the head of the html page define a style tag
 </head>
 ```
 
-Include the styling described below, within the style tag we defined.
+Include the styling in this tutorial, within the style tag we just created.
 
 ## Introductions to selectors
 
@@ -127,9 +136,11 @@ A useful resource for figuring out color codes is [http://0to255.com](http://0to
 
 **1px** defines the thickness of the border
 
-**dotted** the style of the line
+**dotted** defines the style of the line
 
-**#a369d5** the color of the border
+**#a369d5** defines the color of the border
+
+How about changing the border thickness to 5px to see what happens? 
 
 #### Selector: class
 
@@ -154,7 +165,7 @@ margin-left: auto;
 What we defined above is
 _margin: (top bottom) (left right)_
 
-> You can see the margin of an element by inspecting it and having a look at the computed tab
+> You can see the margin of an element by right clicking in your browser and selecting Inspect Element then having a look at the computed tab on the right hand site. (If you're using Safari this feature is not enabled by default like Chrome so go to your Safari preferences tab, then go to Advanced and check the box that says Show develop menu in menu bar).
 
 #### Selector: id
 
@@ -369,7 +380,7 @@ ol li {
 }
 ```
 
-**font-weight** thickness of displayed text
+**font-weight** is the thickness of displayed text
 
 **text-align** horizontal alignment of a text element
 
@@ -425,7 +436,7 @@ ol li {
 
 ### Pseudo classes
 
-A psedo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
+A pseudo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
 
 Let's add the code below to make sure we only apply a margin to the _first li element_ within the pictures class.
 
@@ -454,6 +465,13 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 }
 ```
 
------
+If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change. 
 
-This ends our second lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+-----
+This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+
+##Further reading
+
+* [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+* [More CSS](http://learn.shayhowe.com/html-css/)
+
